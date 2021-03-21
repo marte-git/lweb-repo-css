@@ -1,0 +1,104 @@
+<?xml version = "1.0" encoding="iso-8859-1"?>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <title>outline e layout di una pagina</title>
+</head>
+
+<body>
+<h1>outline e layout di una pagina</h1>
+<p>
+ <ul style=" list-style-type: none">
+  <li>L'<strong>outline</strong> della pagina consiste nella <em>struttura</em> che l'uso dei vari elementi conferisce al <em>contenuto</em> della pagina.
+  </li>
+  <li>il <b>layout</b> della pagina consiste nel modo in cui i vari elementi (e quindi il loro <i>contenuto</i>) vengono <i>visualizzati</i>.</li>
+ </ul>
+</p>
+
+<p>
+Ad esempio, per costruire un elenco si puo' distribuire testo su piu' righe esprimendo il layout del testo (cioe' scrivendo testo su tre righe andando esplicitamente a capo ogni volta)
+<br />
+primo pezzetto;
+<br />
+secondo pezzetto
+<br />
+terzo pezzetto
+</p>
+
+<p>
+oppure si puo' usare un elemento lista &lt;ul&gt;, in cui ogni pezzetto e' elencato come sottoelemento &lt;li&gt;
+ <ul>
+  <li>primo pezzetto;</li>
+  <li>secondo pezzetto;</li>
+  <li>terzo pezzetto;</li>
+ </ul>
+</p>
+
+<p>Con la seconda soluzione si e' reso esplicito l'outline del documento: &quot;nel documento c'&egrave; un elemento che esprime la struttura di questa parte del documento&quot;.
+</p>
+<p>L'elemento strutturale &lt;ul&gt; dice esplicitamente che il suo contenuto ha, nel documento, la funzione di una lista, un elenco di alinee.
+</p>
+<p>
+Un'applicazione che legge il documento puo' conoscere la funzione di quel brano di documento proprio attraverso la "marcatura" di quel brano e comportarsi di conseguenza.
+<ul>
+ <li>Se l'applicazione fosse dedicata alla sua visualizzazione su monitor, seguirebbe certe modalita';</li>
+ <li>Se l'applicazione fosse dedicata alla sua visualizzazione del documento su cellulare, avendo saputo che tipo di struttura deve visualizzare potrebbe applicare le sue tecniche appropriate;</li>
+ <li>Se l'applicazione fosse dedicata alla lettura vocale del documento potrebbe applicare le sue tecniche appropriate;</li>
+ <li>Se l'applicazione stesse cercando dati da immagazzinare in un suo database, saprebbe come individuare le alinee (e che ci sono delle alinee da individuare.</li>
+</ul>
+Una elencazione fatta con i &lt;br /&gt; non permetterebbe di capire che si sta trattando di alinee in una lista e non semploci andate a capo ...
+</p>
+
+<h1 style="margin-top: 15ex">
+Il layout si puo' dare comunque ...</h1>
+Il layout puo' essere manipolato dall'autore, attraverso gli strumenti appositi, cioe' definendo le regole di visualizzazione cui l'applicazione che riceve il documento (il browser per noi) dovrebbe attenersi: CSS.
+
+<ul style=" list-style-type: none">
+  <li>Quando l'autore del documento dice: "qui voglio una lista" dice che dovra' esserci del contenuto distribuito in forma di lista.</li>
+  <li>Se l'autore dice anche <em>&quot;ma io, inoltre, voglio una lista in cui le alinee non sono demarcate da un 'bullet' ...&quot;</em> allora sta accoppiando <strong>alla</strong> sua intenzione di comporre del testo secondo una struttura (outline), <strong>quella</strong> di dare una veste grafica particolare a quel testo (layout); a questa seconda intenzione si risponde con strumenti di controllo del layout (css).</li>
+ </ul>
+
+E la presentazione puo' essere variata, variando le regole di visualizzazione (css) applicate ai vari elementi, ad esempio
+ <ul style="list-style-type: circle">
+  <li>primo pezzetto;</li>
+  <li>secondo pezzetto;</li>
+  <li>terzo pezzetto;</li>
+ </ul>
+
+o
+<ul style="list-style-type: none; padding:0; margin-left:0">
+  <li>primo pezzetto;</li>
+  <li>secondo pezzetto;</li>
+  <li>terzo pezzetto;</li>
+ </ul>
+</p>
+
+<h2>discorso analogo per &lt;b&gt; e &lt;i&gt;</h2>
+<p>
+si tratta di tag destinati a convogliare aspetti di layout nel documento e come tali in via di scomparsa (cioe' non in XHTML);
+
+ <ul style=" list-style-type: none">
+  <li>&lt;b&gt;testo in grassetto&lt;/b&gt; = <b>testo in grassetto</b> </li>
+  <li>&lt;i&gt;testo in italico&lt;/i&gt; = <i>testo in grassetto</i> </li>
+ </ul>
+
+&lt;strong&gt; e &lt;em&gt; assolvono alla relativa funzione strutturale e son o quelli da usare. Sono per default interpretati dai browser di solito con &lt;b&gt; e &lt;i&gt;
+<ul>
+  <li>&lt;strong&gt;testo strong&lt;/strong&gt; = <strong>testo strong</strong> </li>
+  <li>&lt;em&gt;testo emphasized&lt;/em&gt; = <em>testo emphasized</em> </li>
+ </ul>
+</p>
+
+ma mentre l'outline dei loro contenuti rimane il medesimo (testo fortemente evidenziato e testo evidenziato, il layout puo' essere predisposto coscientememte attraverso lo strumento apposito (css)
+
+<ul>
+  <li>&lt;strong&gt;(small-caps, piu' grande, oblique)&lt;/strong&gt; = <strong style="font-variant: small-caps; font-size: 120%; font-style: oblique">testo strong con stile modificato</strong> </li>
+  <li>&lt;em&gt;(bold, un po' piu' grande, small-caps&lt;/em&gt; = <em style="font-weight: bold; font-variant: small-caps; font-size: 110%; font-style: normal">testo emphasized con stile modificato</em> </li>
+ </ul>
+</p>
+
+<p>(anche &lt;b&gt; e &lt;i&gt; possono subire il medesimo trattamento ma sarebbe un'aggiunta di incoerenza ...)
+</body>
+</html>
