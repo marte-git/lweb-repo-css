@@ -8,4 +8,5 @@ ___questo sito web prende spunto da un esercizio di quelli deliranti scritti in 
 - usando before nella classe "intestazione" abbiamo ottenuto un effetto fancy a poco prezzo
 
 ah, siamo Alcibiade Ateniese, e Nicia dell'Acropoli 
+
 **fine**
